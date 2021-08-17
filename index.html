@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ValoTrade | A Trade Market</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -18,9 +19,10 @@
         <div class="navigation_bar">
             <div class="logo">
                 <img src="./Image/Logo.png" width="125px">
+                
             </div>
             <nav>
-                <ul>
+                <ul id="menu_items">
                     <li><a href="Home">Home</a></li>
                     <li><a href="Valorant IDs">Valorant IDs</a></li>
                     <li><a href="About">About</a></li>
@@ -29,6 +31,7 @@
                 </ul>   
             </nav>
             <img src="Image/add-cart.png" width="30px" height="30px">
+            <img src="https://img.icons8.com/office/16/000000/menu--v3.png" class="menu-icon" onclick="menutoggle()">
         </div>
         <div class="row">
             <div class="col-2">
@@ -303,6 +306,24 @@
             <p class="msg">Thank You for visiting our website</p>
         </div>
     </div>
+
+    <!-----------Js for toggle menu------------->
+
+    <script>
+        var menu_items = document.getElementById("menu_items");
+        menu_items.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if(menu_items.style.maxHeight == "0px")
+            {
+                menu_items.style.maxHeight = "200px";
+            }
+            else
+            {
+                menu_items.style.maxHeight = "0px";
+            }
+        }
+    </script>
 
 </body>
 </html>
